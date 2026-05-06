@@ -95,9 +95,10 @@ class GestureManager: ObservableObject {
                     }
                 }
                 let avgDeltaY = totalDeltaY / 3.0
-                if avgDeltaY < -0.05 && !isSwiping {
+                
+                // 🌟 改變 1: 拉長判定距離，並且這裡只做標記不執行
+                if avgDeltaY < -0.10 && !isSwiping {
                     isSwiping = true
-                    if isEnabled("enableEsc") { simulateEscKey() }
                 }
             }
         }
@@ -113,6 +114,11 @@ class GestureManager: ObservableObject {
                         } else if maxFingersInCurrentGesture == 4 {
                             if isEnabled("enableMaximize") { maximizeFocusedWindow() }
                         }
+                    }
+                } else {
+                    // 🌟 改變 2: 手指抬起且剛剛有達成滑動距離時，才執行 ESC
+                    if maxFingersInCurrentGesture == 3 {
+                        if isEnabled("enableEsc") { simulateEscKey() }
                     }
                 }
                 maxFingersInCurrentGesture = 0
