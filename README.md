@@ -1,5 +1,5 @@
 # MyGesture
-<img width="256" height="256" alt="AppIcon-iOS-Default-512x512@1x" src="https://github.com/user-attachments/assets/1eb2b6d9-fd3f-4413-84a0-53d43936e67f" />
+<img width="128" height="128" alt="AppIcon-iOS-Default-512x512@1x" src="https://github.com/user-attachments/assets/1eb2b6d9-fd3f-4413-84a0-53d43936e67f" />
 
 <br>
 
