@@ -2,18 +2,29 @@ import SwiftUI
 
 @main
 struct MyGestureApp: App {
+    // 🌟 把「手勢管理者」放在這裡，確保它永遠在背景存活，不會被系統殺掉
+    @StateObject var gestureManager = GestureManager()
+
     var body: some Scene {
-        // 這裡就是把它變成選單列圖示的魔法
         MenuBarExtra("我的手勢", systemImage: "hand.point.up.left.fill") {
-            ContentView() // 把我們原本寫好的畫面放進來
+            
+            // 🌟 修正警告：改用 Apple 原生的 SettingsLink
+            SettingsLink {
+                Label("偏好設定...", systemImage: "gearshape")
+            }
             
             Divider() // 畫一條分隔線
             
-            // 加一個可以真正關閉 App 的按鈕
-            Button("結束程式") {
+            Button(action: {
                 NSApplication.shared.terminate(nil)
+            }) {
+                Label("結束 MyGesture", systemImage: "xmark.square")
             }
         }
-        .menuBarExtraStyle(.window) // 讓它點選後像個小視窗掉下來
+
+        // 🌟 這裡定義了「偏好設定...」點開後要出現的視窗
+        Settings {
+            ContentView(gestureManager: gestureManager)
+        }
     }
 }
