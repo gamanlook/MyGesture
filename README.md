@@ -18,16 +18,17 @@
 
 ⬇️ 安裝方法：
 1. 將下載的 MyGesture.app 拖曳放進「應用程式 (Applications)」資料夾裡
-2. 選擇螢幕左上角「蘋果」選單 >「系統設定」，然後找到側邊欄的「隱私權與安全性」（你可能需要向下捲動）
-3. 接著往下捲動找到「安全性」，然後按一下「強制打開」
-4. 此時 MyGesture 會出現於螢幕右上角\
+2. 嘗試執行一次 APP，看到「無法開啟」的警告窗
+3. 選擇螢幕左上角「蘋果」選單 >「系統設定」，然後找到側邊欄的「隱私權與安全性」（你可能需要向下捲動）
+4. 接著往下捲動找到「安全性」，然後按一下「強制打開」
+5. 此時 MyGesture 會出現於螢幕右上角\
     <img width="380" height="120" alt="image" src="https://github.com/user-attachments/assets/41e82d3d-ff84-41cf-977a-a957d7bdc2cf" />
-5. 點擊「偏好設定...」 > 點擊「開啟權限設定」> 點擊彈出視窗的「打開系統設定」
-6. 選擇 MyGesture 將開關打開\
+6. 點擊「偏好設定...」 > 點擊「開啟權限設定」> 點擊彈出視窗的「打開系統設定」
+7. 選擇 MyGesture 將開關打開\
     <img width="400" height="370" alt="image" src="https://github.com/user-attachments/assets/d8880dd4-754e-4cc2-b940-0666704b155b" />
-    <sub>如果有失靈的時候，點 MyGesture 讓它變成選取中，點擊坐下角的「-」將其刪除，再點擊「+」重新選擇 MyGesture</sub>
+    <sub>如果失靈，點 MyGesture 那排讓它變成已選取，點擊坐下角的「-」將其刪除，再點擊「+」重新選擇 MyGesture</sub>
 
-7. 大功告成！可以順便去「系統設定」>「觸控式軌跡板」把會衝突打架的手勢（三指輕觸、三指下滑）關掉
+8. 大功告成！可以順便去「系統設定」>「觸控式軌跡板」把會衝突打架的手勢（三指輕觸、三指下滑）關掉
     <img width="800" height="370" alt="image" src="https://github.com/user-attachments/assets/b6f1078e-4f23-47dd-875a-9067f00dc43e" />
 
 
