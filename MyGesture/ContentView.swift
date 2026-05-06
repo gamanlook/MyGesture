@@ -16,6 +16,7 @@ class GestureManager: ObservableObject {
     var startPositions:[Int32: OMSPosition] = [:]
     var maxFingersInCurrentGesture = 0
     var isSwiping = false
+    var gestureStartTime: Date? // 🌟 記錄手勢開始時間
     
     init() {
         Task {
@@ -75,6 +76,9 @@ class GestureManager: ObservableObject {
         let state = touch.state
         
         if state == .starting || state == .making {
+            if activeTouches.isEmpty {
+                gestureStartTime = Date() // 🌟 開始計時
+            }
             activeTouches[touch.id] = touch
             startPositions[touch.id] = touch.position
             if activeTouches.count > maxFingersInCurrentGesture {
@@ -101,15 +105,20 @@ class GestureManager: ObservableObject {
             activeTouches.removeValue(forKey: touch.id)
             if activeTouches.isEmpty {
                 if !isSwiping {
-                    if maxFingersInCurrentGesture == 3 {
-                        if isEnabled("enableMiddleClick") { simulateMiddleClick() }
-                    } else if maxFingersInCurrentGesture == 4 {
-                        if isEnabled("enableMaximize") { maximizeFocusedWindow() }
+                    // 🌟 計算從放上手指到離開經過了多久
+                    let duration = Date().timeIntervalSince(gestureStartTime ?? Date())
+                    if duration < 0.25 { // 🌟 限制 250ms 內完成才算輕觸
+                        if maxFingersInCurrentGesture == 3 {
+                            if isEnabled("enableMiddleClick") { simulateMiddleClick() }
+                        } else if maxFingersInCurrentGesture == 4 {
+                            if isEnabled("enableMaximize") { maximizeFocusedWindow() }
+                        }
                     }
                 }
                 maxFingersInCurrentGesture = 0
                 startPositions.removeAll()
                 isSwiping = false
+                gestureStartTime = nil // 🌟 清除計時
             }
         }
     }
@@ -203,6 +212,7 @@ struct ContentView: View {
         .frame(width: 450, height: 230)
         .navigationTitle("MyGesture")
         .onAppear {
+            NSApp.activate(ignoringOtherApps: true) // 🌟 讓視窗一打開就強制顯示在最前面
             hasPermission = AXIsProcessTrusted()
             if hasPermission { gestureManager.start() }
         }
