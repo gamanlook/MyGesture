@@ -26,7 +26,7 @@
 
 ## 安裝方法
 
-1. 下載 zip 並解壓縮後，請把 MyGesture.app 拖曳到你的 「應用程式 (Applications)」 資料夾中
+1. [下載](https://github.com/gamanlook/MyGesture/releases/latest/download/MyGesture.zip)並解壓縮後，請把 MyGesture.app 拖曳到你的 「應用程式 (Applications)」 資料夾中
 2. 接下來根據電腦新舊有不同走法：
     - **若電腦比 MacOS 26 更舊**：可以直接「右鍵 > 打開」，然後接續第5步
     - **若電腦為 MacOS 26 以上**：嘗試執行一次 APP，看到「無法開啟」的警告窗，先按「完成」（請不要丟到垃圾桶）
