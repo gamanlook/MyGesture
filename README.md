@@ -28,7 +28,7 @@
     - 也可以從「系統設定」>「隱私權與安全性」> 「輔助使用」（很下面，請向下捲動）找到
 8. 選擇 MyGesture 將開關打開\
     <img width="400" height="370" alt="image" src="https://github.com/user-attachments/assets/d8880dd4-754e-4cc2-b940-0666704b155b" />
-    <sub>如果失靈，點 MyGesture 那排讓它變成已選取，點擊坐下角的「-」將其刪除，再點擊「+」重新選擇 MyGesture</sub>
+    <sub>⚠️如果失靈，點 MyGesture 那排讓它變成已選取，點擊坐下角的「-」將其刪除，再點擊「+」重新選擇 MyGesture</sub>
 
 9. 大功告成！可以順便去「系統設定」>「觸控式軌跡板」把會衝突打架的手勢（三指輕觸、三指下滑）關掉
     <img width="800" height="370" alt="image" src="https://github.com/user-attachments/assets/b6f1078e-4f23-47dd-875a-9067f00dc43e" />
