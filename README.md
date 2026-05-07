@@ -25,11 +25,12 @@
 5. 此時 MyGesture 會出現於螢幕右上角\
     <img width="380" height="120" alt="image" src="https://github.com/user-attachments/assets/41e82d3d-ff84-41cf-977a-a957d7bdc2cf" />
 6. 點擊「偏好設定...」 > 點擊「開啟權限設定」> 點擊彈出視窗的「打開系統設定」
-7. 選擇 MyGesture 將開關打開\
+    - 也可以從「系統設定」>「隱私權與安全性」> 「輔助使用」（很下面，請向下捲動）找到
+8. 選擇 MyGesture 將開關打開\
     <img width="400" height="370" alt="image" src="https://github.com/user-attachments/assets/d8880dd4-754e-4cc2-b940-0666704b155b" />
     <sub>如果失靈，點 MyGesture 那排讓它變成已選取，點擊坐下角的「-」將其刪除，再點擊「+」重新選擇 MyGesture</sub>
 
-8. 大功告成！可以順便去「系統設定」>「觸控式軌跡板」把會衝突打架的手勢（三指輕觸、三指下滑）關掉
+9. 大功告成！可以順便去「系統設定」>「觸控式軌跡板」把會衝突打架的手勢（三指輕觸、三指下滑）關掉
     <img width="800" height="370" alt="image" src="https://github.com/user-attachments/assets/b6f1078e-4f23-47dd-875a-9067f00dc43e" />
 
 
