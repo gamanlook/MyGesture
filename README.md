@@ -33,7 +33,7 @@
         <img width="290" height="260" alt="image" src="https://github.com/user-attachments/assets/d8b673c9-de2c-402d-8cc0-bbfe1f1c7733" />
 
 3. 選擇螢幕左上角「蘋果」選單 >「系統設定」，然後找到側邊欄的「隱私權與安全性」（你可能需要向下捲動）
-4. 接著往下捲動找到「安全性」，然後按一下「強制打開」
+4. 於「隱私權與安全性」內找到「已阻擋...」（需要向下捲動找），然後按一下「強制打開」
     <img width="429" height="222" alt="image" src="https://github.com/user-attachments/assets/0d310e08-03cb-4185-a797-15817b3b5b8d" />
 
 5. 此時 MyGesture 就會出現於螢幕右上角\
