@@ -1,8 +1,8 @@
 {
   "fill" : {
     "linear-gradient" : [
-      "display-p3:0.75261,0.96008,0.35341,1.00000",
-      "srgb:0.09020,0.77255,0.58824,1.00000"
+      "display-p3:0.67451,0.80392,1.00000,1.00000",
+      "srgb:0.25882,0.34118,0.96078,1.00000"
     ],
     "orientation" : {
       "start" : {
@@ -36,10 +36,21 @@
         "opacity" : 0.5
       },
       "specular" : true,
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.6
-      }
+      "translucency-specializations" : [
+        {
+          "value" : {
+            "enabled" : true,
+            "value" : 0.6
+          }
+        },
+        {
+          "appearance" : "dark",
+          "value" : {
+            "enabled" : true,
+            "value" : 0.5
+          }
+        }
+      ]
     }
   ],
   "supported-platforms" : {

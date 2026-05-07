@@ -208,14 +208,35 @@ struct ContentView: View {
             }
             
             Section {
-                Toggle("三指輕觸 = 滑鼠中鍵", isOn: $enableMiddleClick)
-                Toggle("三指下滑 = ESC 鍵", isOn: $enableEsc)
-                Toggle("四指輕觸 = 填滿視窗", isOn: $enableMaximize)
+                Toggle(isOn: $enableMiddleClick) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("三指輕觸 = 滑鼠中鍵")
+                        Text("可快速另開分頁")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                Toggle(isOn: $enableEsc) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("三指下滑 = ESC 鍵")
+                        Text("可快速關閉預覽")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                Toggle(isOn: $enableMaximize) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("四指輕觸 = 填滿視窗")
+                        Text("可快速讓視窗最大化")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
             .toggleStyle(.switch)
         }
         .formStyle(.grouped)
-        .frame(width: 450, height: 230)
+        .frame(width: 450, height: 320)
         .navigationTitle("MyGesture")
         .onAppear {
             NSApp.activate(ignoringOtherApps: true) // 🌟 讓視窗一打開就強制顯示在最前面
