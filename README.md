@@ -44,7 +44,8 @@
     ⚠️如果APP失靈，點擊左下角的「-」將其刪除，然後「+」重新選擇 MyGesture
     <img width="400" height="370" alt="image" src="https://github.com/user-attachments/assets/47d09a14-097f-4769-ad2d-52e9357a7ad4" />
 
-9. 大功告成！可以順便去「系統設定」>「觸控式軌跡板」把會衝突打架的手勢（三指輕觸、三指下滑）關掉
+9. **大功告成！**\
+    可以順便去「系統設定」>「觸控式軌跡板」把會衝突打架的手勢（三指輕觸、三指下滑）關掉
     <img width="800" height="370" alt="image" src="https://github.com/user-attachments/assets/b6f1078e-4f23-47dd-875a-9067f00dc43e" />
 
 
