@@ -9,7 +9,6 @@
 🤟 三指輕觸：滑鼠中鍵（可快速另開分頁）\
 👋 三指下滑：ESC 鍵（可快速關閉預覽）\
 🖐️ 四指輕觸：填滿視窗（可快速讓視窗最大化）
-
 <br>
 
 👉 [點此下載 MyGesture](https://github.com/gamanlook/MyGesture/releases/latest/download/MyGesture.zip)
