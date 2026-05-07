@@ -25,7 +25,7 @@
 1. 將下載的 MyGesture.app 拖曳放進「應用程式 (Applications)」資料夾裡
 2. 接下來根據電腦新舊有不同走法：
     - **若電腦比 MacOS 26 更舊**：可以直接「右鍵 > 打開」，然後接續第5步
-    - **若電腦為 MacOS 26 以上**：嘗試執行一次 APP，看到「無法開啟」的警告窗
+    - **若電腦為 MacOS 26 以上**：嘗試執行一次 APP，看到「無法開啟」的警告窗，先按「完成」（請不要丟到垃圾桶）
         <img width="290" height="260" alt="image" src="https://github.com/user-attachments/assets/d8b673c9-de2c-402d-8cc0-bbfe1f1c7733" />
 
 3. 選擇螢幕左上角「蘋果」選單 >「系統設定」，然後找到側邊欄的「隱私權與安全性」（你可能需要向下捲動）
