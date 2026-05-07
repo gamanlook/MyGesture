@@ -37,7 +37,8 @@
     <img width="429" height="222" alt="image" src="https://github.com/user-attachments/assets/0d310e08-03cb-4185-a797-15817b3b5b8d" />
 
 5. 此時 MyGesture 就會出現於螢幕右上角\
-    <img width="380" height="120" alt="image" src="https://github.com/user-attachments/assets/41e82d3d-ff84-41cf-977a-a957d7bdc2cf" />
+    <img width="280" height="116" alt="image" src="https://github.com/user-attachments/assets/3240f5d8-a442-423e-a9d4-6e3d6639ecf1" />
+
 6. 點擊「偏好設定...」 > 點擊「開啟權限設定」> 點擊彈出視窗的「打開系統設定」
     - 也可以從「蘋果」選單 >「系統設定」>「隱私權與安全性」>「輔助使用」（需要向下捲動找）
 8. 選擇 MyGesture 將「開關打開」\
