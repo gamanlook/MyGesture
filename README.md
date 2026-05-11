@@ -30,7 +30,7 @@
 💻 **Requirements:** MacOS Sonoma 14.3 or later.
 
 🖱️ **巧控滑鼠**：如果電腦有接蘋果的巧控滑鼠(Magic Mouse)，該APP的手勢只有滑鼠能用，觸控板則不行。\
-🖱️ **Magic Mouse:** If an Apple Magic Mouse is connected, the app's gestures will only work on the mouse, and trackpad gestures will be temporarily disabled.
+🖱️ **Magic Mouse:** If an Apple Magic Mouse is connected, this app's custom gestures will only work on the mouse and not on the trackpad.
 
 <br>
 
