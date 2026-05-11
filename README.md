@@ -73,8 +73,3 @@
    可以順便去「系統設定」>「觸控式軌跡板」把會衝突打架的手勢（三指輕觸、三指下滑）關掉。\
    You can also go to **System Settings** > **Trackpad** to disable any conflicting native gestures (like 3-finger tap or 3-finger swipe down).
     <img width="800" height="370" alt="image" src="https://github.com/user-attachments/assets/b6f1078e-4f23-47dd-875a-9067f00dc43e" />
-
-***
-
-你可以直接把整段複製貼上到 GitHub 的 README 編輯器裡。這樣的雙語排版非常具有國際水準，恭喜你的第一個完美開源專案大功告成啦！🚀
-
