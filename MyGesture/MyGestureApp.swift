@@ -38,7 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 backing: .buffered,
                 defer: false
             )
-            window.title = "MyGesture"
+            window.title = String(localized: "app_name")
             window.center() // 讓視窗出現在螢幕正中央
             window.isReleasedWhenClosed = false // 🌟 關鍵：關閉時不要銷毀記憶體，這樣才能秒開
             
@@ -57,13 +57,13 @@ struct MyGestureApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
-        MenuBarExtra("我的手勢", systemImage: "hand.point.up.left.fill") {
+        MenuBarExtra("app_name", systemImage: "hand.point.up.left.fill") {
             
             // 直接呼叫 AppDelegate 的魔法函數，不再需要廣播了！
             Button(action: {
                 appDelegate.openSettingsWindow()
             }) {
-                Label("偏好設定...", systemImage: "gearshape")
+                Label("menu_preferences", systemImage: "gearshape")
             }
             .keyboardShortcut(",", modifiers: .command)
             
@@ -72,7 +72,7 @@ struct MyGestureApp: App {
             Button(action: {
                 NSApplication.shared.terminate(nil)
             }) {
-                Label("結束 MyGesture", systemImage: "xmark.square")
+                Label("menu_quit", systemImage: "xmark.square")
             }
         }
     }

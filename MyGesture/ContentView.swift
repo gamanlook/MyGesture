@@ -189,19 +189,19 @@ struct ContentView: View {
             Section {
                 if !hasPermission {
                     HStack {
-                        Text("需要輔助使用權限才能控制系統")
+                        Text("permission_required_message")
                             .foregroundColor(.secondary)
                         Spacer()
-                        Button("開啟權限設定") {
+                        Button("permission_open_settings") {
                             let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true]
                             _ = AXIsProcessTrustedWithOptions(options)
                         }
                     }
                 } else {
                     HStack {
-                        Text("系統控制權限")
+                        Text("permission_status_label")
                         Spacer()
-                        Text("已開啟")
+                        Text("permission_status_granted")
                             .foregroundColor(.secondary)
                     }
                 }
@@ -210,24 +210,24 @@ struct ContentView: View {
             Section {
                 Toggle(isOn: $enableMiddleClick) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("三指輕觸 = 滑鼠中鍵")
-                        Text("可快速另開分頁")
+                        Text("gesture_3tap_title")
+                        Text("gesture_3tap_desc")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
                 }
                 Toggle(isOn: $enableEsc) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("三指下滑 = ESC 鍵")
-                        Text("可快速關閉預覽")
+                        Text("gesture_3swipe_down_title")
+                        Text("gesture_3swipe_down_desc")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
                 }
                 Toggle(isOn: $enableMaximize) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("四指輕觸 = 填滿視窗")
-                        Text("可快速讓視窗最大化")
+                        Text("gesture_4tap_title")
+                        Text("gesture_4tap_desc")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
@@ -237,7 +237,7 @@ struct ContentView: View {
         }
         .formStyle(.grouped)
         .frame(width: 450, height: 320)
-        .navigationTitle("MyGesture")
+        .navigationTitle("app_name")
         .onAppear {
             NSApp.activate(ignoringOtherApps: true) // 🌟 讓視窗一打開就強制顯示在最前面
             hasPermission = AXIsProcessTrusted()
