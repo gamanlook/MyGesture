@@ -45,7 +45,7 @@
     - **若電腦為 MacOS 26 以上**：嘗試執行一次 APP，看到「無法開啟」的警告窗，先按「完成」（請不要丟到垃圾桶）。
     - **Older than MacOS 26:** Simply "Right-click > Open", then skip to step 5.
     - **MacOS 26 or later:** Try to run the app once. When you see the "cannot be opened" warning, click "Done" (Please do NOT move it to the trash).
-        <img width="290" height="260" alt="image" src="https://github.com/user-attachments/assets/d8b673c9-de2c-402d-8cc0-bbfe1f1c7733" />
+   <img width="290" height="260" alt="image" src="https://github.com/user-attachments/assets/d8b673c9-de2c-402d-8cc0-bbfe1f1c7733" />
 
 3. 選擇螢幕左上角「蘋果」選單 >「系統設定」，然後找到側邊欄的「隱私權與安全性」（你可能需要向下捲動）。\
    Go to the Apple menu () > **System Settings**, then select **Privacy & Security** in the sidebar (you may need to scroll down).
@@ -55,7 +55,7 @@
     <img width="429" height="222" alt="image" src="https://github.com/user-attachments/assets/0d310e08-03cb-4185-a797-15817b3b5b8d" />
 
 5. 此時 MyGesture 就會出現於螢幕右上角。\
-   MyGesture will now appear in your top-right menu bar.
+   MyGesture will now appear in your top-right menu bar.\
     <img width="280" height="116" alt="image" src="https://github.com/user-attachments/assets/3240f5d8-a442-423e-a9d4-6e3d6639ecf1" />
 
 6. 點擊「偏好設定...」 > 點擊「開啟權限設定」> 點擊彈出視窗的「打開系統設定」。\
