@@ -17,7 +17,7 @@
 
 <br>
 
-👉[點此下載 | Download Here](https://github.com/gamanlook/MyGesture/releases/latest/download/MyGesture.zip)
+👉[點此下載｜Download Here](https://github.com/gamanlook/MyGesture/releases/latest/download/MyGesture.zip)
 
 <br>
 
