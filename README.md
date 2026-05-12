@@ -13,7 +13,7 @@
 👋 **3-Finger Swipe Down:** ESC Key (Quickly close previews)
 
 🖐️ **四指輕點**：填滿視窗（可快速讓視窗最大化）\
-🖐️ **4-Finger Tap:** Fill Window (Quickly maximize windows)
+🖐️ **4-Finger Tap:** Fill Window (Quickly maximize the window)
 
 <br>
 
