@@ -6,13 +6,13 @@
 **擴充手勢讓工作更順暢**\
 **Expand gestures to make your workflow smoother**
 
-🤟 **三指輕觸**：滑鼠中鍵（可快速另開分頁）\
+🤟 **三指輕點**：滑鼠中鍵（可快速另開分頁）\
 🤟 **3-Finger Tap:** Middle Click (Quickly open links in new tabs)
 
 👋 **三指下滑**：ESC 鍵（可快速關閉預覽）\
 👋 **3-Finger Swipe Down:** ESC Key (Quickly close previews)
 
-🖐️ **四指輕觸**：填滿視窗（可快速讓視窗最大化）\
+🖐️ **四指輕點**：填滿視窗（可快速讓視窗最大化）\
 🖐️ **4-Finger Tap:** Fill Window (Quickly maximize windows)
 
 <br>
