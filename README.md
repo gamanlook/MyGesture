@@ -27,11 +27,11 @@
 ## 注意事項 / Notes
 
 😇 **完全免費**：由於我沒有繳每年99美金的開發保護費，所以**安裝起來會比較麻煩**。\
-💻 **最低需求**：MacOS Sonoma 14.3 以上\
+💻 **最低需求**：macOS Sonoma 14.3 以上\
 🖱️ **巧控滑鼠**：如果電腦有接蘋果的巧控滑鼠(Magic Mouse)，該APP的手勢只有滑鼠能用，觸控板則不行。
 
 😇 **Completely Free:** Since I didn't pay the $99/year Apple Developer fee, **the installation process is a bit more complicated.**\
-💻 **Requirements:** MacOS Sonoma 14.3 or later.\
+💻 **Requirements:** macOS Sonoma 14.3 or later.\
 🖱️ **Magic Mouse:** If an Apple Magic Mouse is connected, this app's custom gestures will only work on the mouse and not on the trackpad.
 
 <br>
@@ -43,10 +43,10 @@
 
 2. 接下來根據電腦新舊有不同走法：\
    The next steps depend on your macOS version:
-    - **若電腦比 MacOS 26 更舊**：可以直接「右鍵 > 打開」，然後接續第5步。
-    - **若電腦為 MacOS 26 以上**：嘗試執行一次 APP，看到「無法開啟」的警告窗，先按「完成」（請不要丟到垃圾桶）。
-    - **Older than MacOS 26:** Simply "Right-click > Open", then skip to step 5.
-    - **MacOS 26 or later:** Try to run the app once. When you see the "cannot be opened" warning, click "Done" (Please do NOT move it to the trash).
+    - **若電腦比 macOS 15 更舊**：可以直接「右鍵 > 打開」，然後接續第5步。
+    - **若電腦為 macOS 15 以上**：嘗試執行一次 APP，看到「無法開啟」的警告窗，先按「完成」（請不要丟到垃圾桶）。
+    - **Older than macOS 15:** Simply "Right-click > Open", then skip to step 5.
+    - **macOS 15 or later:** Try to run the app once. When you see the "cannot be opened" warning, click "Done" (Please do NOT move it to the trash).
    <img width="290" height="260" alt="image" src="https://github.com/user-attachments/assets/d8b673c9-de2c-402d-8cc0-bbfe1f1c7733" />
 
 3. 選擇螢幕左上角「蘋果」選單 >「系統設定」，然後找到側邊欄的「隱私權與安全性」（你可能需要向下捲動）。\
