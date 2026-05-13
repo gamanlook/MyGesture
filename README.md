@@ -2,6 +2,7 @@
 <img width="128" height="128" alt="AppIcon-iOS-Default-512x512@1x" src="https://github.com/user-attachments/assets/48e8129c-de21-4853-ac6d-9bc7af599df2" />
 
 <br>
+<br>
 
 **擴充手勢讓工作更順暢**\
 **Expand gestures to make your workflow smoother**
