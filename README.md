@@ -7,6 +7,8 @@
 **擴充手勢讓工作更順暢**\
 **Expand gestures to make your workflow smoother**
 
+<br>
+
 🤟 **三指輕點**：滑鼠中鍵（可快速另開分頁）\
 🤟 **3-Finger Tap:** Middle Click (Quickly open links in new tabs)
 
