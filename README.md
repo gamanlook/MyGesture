@@ -10,12 +10,12 @@
 <br>
 
 🤟 **三指輕點**：滑鼠中鍵（可快速另開分頁）\
-👋 **三指下滑**：ESC 鍵（可快速關閉預覽）\
+👋 **三指下滑**：⌘Command + W（可快速關閉分頁）\
 🖐️ **四指輕點**：填滿視窗（可快速讓視窗最大化）
 
 
 🤟 **3-Finger Tap:** Middle Click (Quickly open links in new tabs)\
-👋 **3-Finger Swipe Down:** ESC Key (Quickly close previews)\
+👋 **3-Finger Swipe Down:** ⌘Command + W (Quickly close the tab)\
 🖐️ **4-Finger Tap:** Fill Window (Quickly maximize the window)
 
 <br>
