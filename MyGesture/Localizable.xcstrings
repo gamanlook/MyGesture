@@ -52,43 +52,43 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quickly close previews."
+            "value" : "Quickly close the tab."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cerrar rápidamente las vistas previas."
+            "value" : "Cerrar rápidamente la pestaña."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fermer rapidement les aperçus."
+            "value" : "Fermer rapidement l'onglet."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "プレビューをすばやく閉じる"
+            "value" : "すばやくタブを閉じる"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "빠르게 미리보기 닫기"
+            "value" : "빠르게 탭 닫기"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "可快速關閉預覽"
+            "value" : "可快速關閉分頁"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "可快速關閉預覽"
+            "value" : "可快速關閉分頁"
           }
         }
       }
@@ -98,43 +98,43 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3-Finger Swipe Down = ESC Key"
+            "value" : "3-Finger Swipe Down = ⌘Command + W"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deslizar 3 dedos hacia abajo = Tecla Esc"
+            "value" : "Deslizar 3 dedos hacia abajo = ⌘Command + W"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Balayer vers le bas (3 doigts) = Touche Esc"
+            "value" : "Balayer vers le bas (3 doigts) = ⌘Command + W"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3本指で下へスワイプ = Escキー"
+            "value" : "3本指で下へスワイプ = ⌘Command + W"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "세 손가락으로 아래로 쓸어내리기 = Esc 키"
+            "value" : "세 손가락으로 아래로 쓸어내리기 = ⌘Command + W"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "三指下滑 = ESC 鍵"
+            "value" : "三指下滑 = ⌘Command + W"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "三指下滑 = ESC 鍵"
+            "value" : "三指下滑 = ⌘Command + W"
           }
         }
       }

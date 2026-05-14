@@ -105,9 +105,9 @@ class GestureManager: ObservableObject {
         else if state == .breaking || state == .leaving || state == .notTouching {
             activeTouches.removeValue(forKey: touch.id)
             if activeTouches.isEmpty {
+                let duration = Date().timeIntervalSince(gestureStartTime ?? Date())
+                
                 if !isSwiping {
-                    // 🌟 計算從放上手指到離開經過了多久
-                    let duration = Date().timeIntervalSince(gestureStartTime ?? Date())
                     if duration < 0.25 { // 🌟 限制 250ms 內完成才算輕觸
                         if maxFingersInCurrentGesture == 3 {
                             if isEnabled("enableMiddleClick") { simulateMiddleClick() }
@@ -116,9 +116,11 @@ class GestureManager: ObservableObject {
                         }
                     }
                 } else {
-                    // 🌟 改變 2: 手指抬起且剛剛有達成滑動距離時，才執行 ESC
-                    if maxFingersInCurrentGesture == 3 {
-                        if isEnabled("enableEsc") { simulateEscKey() }
+                    // 🌟 改變 2: 手指抬起且剛剛有達成滑動距離時，才執行 ESC，並且要在一定時間內完成！
+                    // 限制 0.4 秒，代表從放上手指到往下滑並離開觸控板，必須在該秒內完成。
+                    // 這樣就可以防止手指一直放在觸控板上、不小心微微往下滑而意外關閉預覽的情況。
+                    if maxFingersInCurrentGesture == 3 && duration < 0.4 {
+                        if isEnabled("enableCmdW") { simulateCmdW() }
                     }
                 }
                 maxFingersInCurrentGesture = 0
@@ -140,10 +142,16 @@ class GestureManager: ObservableObject {
         up?.post(tap: .cghidEventTap)
     }
     
-    func simulateEscKey() {
+    func simulateCmdW() {
         let src = CGEventSource(stateID: .hidSystemState)
-        let down = CGEvent(keyboardEventSource: src, virtualKey: 0x35, keyDown: true)
-        let up = CGEvent(keyboardEventSource: src, virtualKey: 0x35, keyDown: false)
+        // virtualKey 13 is 'W'
+        let down = CGEvent(keyboardEventSource: src, virtualKey: 13, keyDown: true)
+        let up = CGEvent(keyboardEventSource: src, virtualKey: 13, keyDown: false)
+        
+        // 加上 Command 鍵的作用
+        down?.flags = .maskCommand
+        up?.flags = .maskCommand
+        
         down?.post(tap: .cghidEventTap)
         up?.post(tap: .cghidEventTap)
     }
@@ -181,7 +189,7 @@ struct ContentView: View {
     @State var hasPermission = false
     
     @AppStorage("enableMiddleClick") var enableMiddleClick = true
-    @AppStorage("enableEsc") var enableEsc = true
+    @AppStorage("enableCmdW") var enableCmdW = true
     @AppStorage("enableMaximize") var enableMaximize = true
     
     var body: some View {
@@ -216,7 +224,7 @@ struct ContentView: View {
                             .foregroundColor(.secondary)
                     }
                 }
-                Toggle(isOn: $enableEsc) {
+                Toggle(isOn: $enableCmdW) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("gesture_3swipe_down_title")
                         Text("gesture_3swipe_down_desc")
