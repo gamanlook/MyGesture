@@ -14,8 +14,8 @@ class GestureManager: ObservableObject {
     
     var activeTouches:[Int32: OMSTouchData] = [:]
     var startPositions:[Int32: OMSPosition] = [:]
+    var lastPositions:[Int32: OMSPosition] = [:] // 🌟 記得手指導航最終的位置
     var maxFingersInCurrentGesture = 0
-    var isSwiping = false
     var gestureStartTime: Date? // 🌟 記錄手勢開始時間
     
     init() {
@@ -74,41 +74,61 @@ class GestureManager: ObservableObject {
     
     func processTouch(_ touch: OMSTouchData) {
         let state = touch.state
+        let touchID = touch.id
         
         if state == .starting || state == .making {
             if activeTouches.isEmpty {
                 gestureStartTime = Date() // 🌟 開始計時
             }
-            activeTouches[touch.id] = touch
-            startPositions[touch.id] = touch.position
+            activeTouches[touchID] = touch
+            if startPositions[touchID] == nil {
+                startPositions[touchID] = touch.position
+            }
+            lastPositions[touchID] = touch.position
             if activeTouches.count > maxFingersInCurrentGesture {
                 maxFingersInCurrentGesture = activeTouches.count
             }
         }
         else if state == .touching || state == .lingering {
-            activeTouches[touch.id] = touch
-            if maxFingersInCurrentGesture == 3 {
-                var totalDeltaY: Float = 0
-                for (id, currentTouch) in activeTouches {
-                    if let start = startPositions[id] {
-                        totalDeltaY += (currentTouch.position.y - start.y)
-                    }
-                }
-                let avgDeltaY = totalDeltaY / 3.0
-                
-                // 🌟 改變 1: 拉長判定距離，並且這裡只做標記不執行
-                if avgDeltaY < -0.10 && !isSwiping {
-                    isSwiping = true
-                }
+            activeTouches[touchID] = touch
+            if startPositions[touchID] == nil {
+                startPositions[touchID] = touch.position
+            }
+            lastPositions[touchID] = touch.position
+            if activeTouches.count > maxFingersInCurrentGesture {
+                maxFingersInCurrentGesture = activeTouches.count
             }
         }
         else if state == .breaking || state == .leaving || state == .notTouching {
-            activeTouches.removeValue(forKey: touch.id)
+            activeTouches.removeValue(forKey: touchID)
+            lastPositions[touchID] = touch.position
+            
             if activeTouches.isEmpty {
                 let duration = Date().timeIntervalSince(gestureStartTime ?? Date())
                 
-                if !isSwiping {
-                    if duration < 0.25 { // 🌟 限制 250ms 內完成才算輕觸
+                var maxMovement: Float = 0.0
+                var swipedDownCount = 0
+                
+                for (id, startPos) in startPositions {
+                    if let endPos = lastPositions[id] {
+                        let deltaX = endPos.x - startPos.x
+                        let deltaY = endPos.y - startPos.y
+                        let movement = sqrt(deltaX*deltaX + deltaY*deltaY)
+                        
+                        if movement > maxMovement {
+                            maxMovement = movement
+                        }
+                        
+                        // 🌟 改變判定：Y向下小於 -0.06 視為有效下滑（方向靠近身體）
+                        if deltaY < -0.06 {
+                            swipedDownCount += 1
+                        }
+                    }
+                }
+                
+                if maxMovement < 0.02 {
+                    // 🌟 幾乎沒移動，當作輕觸 (Tap)
+                    if duration < 0.25 {
                         if maxFingersInCurrentGesture == 3 {
                             if isEnabled("enableMiddleClick") { simulateMiddleClick() }
                         } else if maxFingersInCurrentGesture == 4 {
@@ -116,16 +136,20 @@ class GestureManager: ObservableObject {
                         }
                     }
                 } else {
-                    // 🌟 改變 2: 手指抬起且剛剛有達成滑動距離時，才執行 ESC，並且要在一定時間內完成！
-                    // 限制 0.4 秒，代表從放上手指到往下滑並離開觸控板，必須在該秒內完成。
-                    // 這樣就可以防止手指一直放在觸控板上、不小心微微往下滑而意外關閉預覽的情況。
-                    if maxFingersInCurrentGesture == 3 && duration < 0.4 {
-                        if isEnabled("enableCmdW") { simulateCmdW() }
+                    // 🌟 有明顯移動，當作滑動 (Swipe)
+                    // 絕大多數手指都有往下滑，且限制在 0.5 秒內完成，防止手指放著誤觸
+                    if duration < 0.5 {
+                        if maxFingersInCurrentGesture == 3 && swipedDownCount >= 2 {
+                            if isEnabled("enableEsc") { simulateEscKey() }
+                        } else if maxFingersInCurrentGesture == 4 && swipedDownCount >= 3 {
+                            if isEnabled("enableCmdW") { simulateCmdW() }
+                        }
                     }
                 }
+                
                 maxFingersInCurrentGesture = 0
                 startPositions.removeAll()
-                isSwiping = false
+                lastPositions.removeAll()
                 gestureStartTime = nil // 🌟 清除計時
             }
         }
@@ -152,6 +176,14 @@ class GestureManager: ObservableObject {
         down?.flags = .maskCommand
         up?.flags = .maskCommand
         
+        down?.post(tap: .cghidEventTap)
+        up?.post(tap: .cghidEventTap)
+    }
+    
+    func simulateEscKey() {
+        let src = CGEventSource(stateID: .hidSystemState)
+        let down = CGEvent(keyboardEventSource: src, virtualKey: 0x35, keyDown: true)
+        let up = CGEvent(keyboardEventSource: src, virtualKey: 0x35, keyDown: false)
         down?.post(tap: .cghidEventTap)
         up?.post(tap: .cghidEventTap)
     }
@@ -189,6 +221,7 @@ struct ContentView: View {
     @State var hasPermission = false
     
     @AppStorage("enableMiddleClick") var enableMiddleClick = true
+    @AppStorage("enableEsc") var enableEsc = true
     @AppStorage("enableCmdW") var enableCmdW = true
     @AppStorage("enableMaximize") var enableMaximize = true
     
@@ -224,7 +257,7 @@ struct ContentView: View {
                             .foregroundColor(.secondary)
                     }
                 }
-                Toggle(isOn: $enableCmdW) {
+                Toggle(isOn: $enableEsc) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("gesture_3swipe_down_title")
                         Text("gesture_3swipe_down_desc")
@@ -240,11 +273,19 @@ struct ContentView: View {
                             .foregroundColor(.secondary)
                     }
                 }
+                Toggle(isOn: $enableCmdW) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("gesture_4swipe_down_title")
+                        Text("gesture_4swipe_down_desc")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
             .toggleStyle(.switch)
         }
         .formStyle(.grouped)
-        .frame(width: 450, height: 320)
+        .frame(width: 450, height: 380)
         .navigationTitle("app_name")
         .onAppear {
             NSApp.activate(ignoringOtherApps: true) // 🌟 讓視窗一打開就強制顯示在最前面

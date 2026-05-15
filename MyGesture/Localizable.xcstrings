@@ -52,6 +52,98 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "Quickly close the preview."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar rápidamente la vista previa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer rapidement l'aperçu."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プレビューをすばやく閉じる"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빠르게 미리보기 닫기"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可快速關閉預覽"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可快速關閉預覽"
+          }
+        }
+      }
+    },
+    "gesture_3swipe_down_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3-Finger Swipe Down = ESC Key"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslizar 3 dedos hacia abajo = Tecla Esc"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer vers le bas (3 doigts) = Touche Esc"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3本指で下へスワイプ = Escキー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세 손가락으로 아래로 쓸어내리기 = Esc 키"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三指下滑 = ESC 鍵"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三指下滑 = ESC 鍵"
+          }
+        }
+      }
+    },
+    "gesture_4swipe_down_desc" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Quickly close the tab."
           }
         },
@@ -93,48 +185,48 @@
         }
       }
     },
-    "gesture_3swipe_down_title" : {
+    "gesture_4swipe_down_title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3-Finger Swipe Down = ⌘Command + W"
+            "value" : "4-Finger Swipe Down = ⌘Command + W"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deslizar 3 dedos hacia abajo = ⌘Command + W"
+            "value" : "Deslizar 4 dedos hacia abajo = ⌘Command + W"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Balayer vers le bas (3 doigts) = ⌘Command + W"
+            "value" : "Balayer vers le bas (4 doigts) = ⌘Command + W"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "3本指で下へスワイプ = ⌘Command + W"
+            "value" : "4本指で下へスワイプ = ⌘Command + W"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "세 손가락으로 아래로 쓸어내리기 = ⌘Command + W"
+            "value" : "네 손가락으로 아래로 쓸어내리기 = ⌘Command + W"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "三指下滑 = ⌘Command + W"
+            "value" : "四指下滑 = ⌘Command + W"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "三指下滑 = ⌘Command + W"
+            "value" : "四指下滑 = ⌘Command + W"
           }
         }
       }
